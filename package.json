@@ -1,0 +1,10 @@
+{
+  "name": "parsel",
+  "version": "0.1.0",
+  "description": "Encrypt and decrypt data with a given key.",
+  "main": "parsel.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fnando/parsel-js.git"
+  }
+}
