@@ -2,8 +2,8 @@
 
 Encrypt and decrypt data with a given key.
 
-This library was created to allow an easy communication
-protocol between Ruby and Node.js.
+This library was created to allow an easy data
+exchange between Ruby and Node.js.
 
 Check it out the Ruby counter-part: <http://github.com/fnando/parsel-rb>.
 
