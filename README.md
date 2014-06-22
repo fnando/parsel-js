@@ -13,11 +13,25 @@ Check it out the Ruby counter-part: <http://github.com/fnando/parsel-rb>.
 
 ## Usage
 
-    var parsel = require("parsel");
+```javascript
+var parsel = require('parsel');
 
-    secret_key = "mysupersecretkeythatnobodyknowsabout"
-    encrypted = parsel.encrypt(secret_key, "hello from ruby!");
-    decrypted = parsel.decrypt(secret_key, encrypted);
+secret_key = 'mysupersecretkeythatnobodyknowsabout'
+encrypted = parsel.encrypt(secret_key, 'hello from ruby!');
+decrypted = parsel.decrypt(secret_key, encrypted);
+```
+
+You also use JSON as your serializer.
+
+```javascript
+var parsel = require('parsel/json');
+var data = {user_id: 1234};
+
+secret_key = 'mysupersecretkeythatnobodyknowsabout'
+encrypted = parsel.encrypt(secret_key, data);
+decrypted = parsel.decrypt(secret_key, encrypted);
+//=> {user_id: 1234}
+```
 
 ## Maintainer
 
