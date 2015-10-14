@@ -21,7 +21,7 @@ var encrypted = parsel.encrypt(secret_key, 'hello from ruby!');
 var decrypted = parsel.decrypt(secret_key, encrypted);
 ```
 
-You also use JSON as your serializer.
+You can also use JSON as your serializer.
 
 ```js
 var parsel = require('parsel/json');
