@@ -1,15 +1,19 @@
-var parsel = require('parsel');
+var parsel = require('.');
+var expandArgs = require('./expand_args');
 
 module.exports = {
-    encrypt: function(key, data) {
-      return parsel.encrypt(key, JSON.stringify(data));
-    }
+  encrypt: function() {
+    var args = expandArgs(arguments);
+    return parsel.encrypt(args.key, args.iv, JSON.stringify(args.data));
+  },
 
-  , decrypt: function(key, data) {
-      try {
-        return JSON.parse(parsel.decrypt(key, data));
-      } catch (error) {
-        return false;
-      }
+  decrypt: function() {
+    var args = expandArgs(arguments);
+
+    try {
+      return JSON.parse(parsel.decrypt(args.key, args.iv, args.data));
+    } catch (error) {
+      return false;
     }
+  }
 };
