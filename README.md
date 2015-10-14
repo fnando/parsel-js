@@ -35,6 +35,8 @@ var decrypted = parsel.decrypt(secret_key, encrypted);
 
 ### Using a custom cipher IV
 
+![Node.js' cipher only accepts 16-chars long IV.](http://messages.hellobits.com/warning.svg?message=Node.js'%20cipher%20only%20accepts%2016-chars%20long%20IV.)
+
 You can provide a custom 16-chars IV.
 
 ```js
