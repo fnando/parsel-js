@@ -14,19 +14,19 @@ Check it out the Ruby counter-part: <http://github.com/fnando/parsel-rb>.
 ## Usage
 
 ```js
-var parsel = require('parsel');
+var parsel = require("parsel");
 
-var secret_key = 'mysupersecretkeythatnobodyknowsabout'
-var encrypted = parsel.encrypt(secret_key, 'hello from ruby!');
+var secret_key = "mysupersecretkeythatnobodyknowsabout"
+var encrypted = parsel.encrypt(secret_key, "hello from ruby!");
 var decrypted = parsel.decrypt(secret_key, encrypted);
 ```
 
 You can also use JSON as your serializer.
 
 ```js
-var parsel = require('parsel/json');
+var parsel = require("parsel/json");
 var data = {user_id: 1234};
-var secret_key = 'mysupersecretkeythatnobodyknowsabout';
+var secret_key = "mysupersecretkeythatnobodyknowsabout";
 
 var encrypted = parsel.encrypt(secret_key, data);
 var decrypted = parsel.decrypt(secret_key, encrypted);
@@ -40,21 +40,21 @@ var decrypted = parsel.decrypt(secret_key, encrypted);
 You can provide a custom 16-chars IV.
 
 ```js
-var parsel = require('parsel');
-var secret_key = 'mysupersecretkeythatnobodyknowsabout';
-var iv = '41318de76c0f5763';
+var parsel = require("parsel");
+var secret_key = "mysupersecretkeythatnobodyknowsabout";
+var iv = "41318de76c0f5763";
 
-var encrypted = parsel.encrypt(secret_key, iv, 'hello');
+var encrypted = parsel.encrypt(secret_key, iv, "hello");
 var decrypted = parsel.decrypt(secret_key, iv, encrypted);
 ```
 
 You may set the custom cipher globally:
 
 ```js
-var parsel = require('parsel');
-var config = require('parsel/config');
+var parsel = require("parsel");
+var config = require("parsel/config");
 
-config.DEFAULT_CIPHER = '41318de76c0f5763';
+config.DEFAULT_CIPHER = "41318de76c0f5763";
 ```
 
 **REMEMBER:** The cipher has to be 16-chars long.

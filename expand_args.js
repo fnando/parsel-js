@@ -1,4 +1,4 @@
-var config = require('./config');
+var config = require("./config");
 var slice = Array.prototype.slice;
 
 module.exports = function expandArgs(args) {

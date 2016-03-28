@@ -1,5 +1,5 @@
-var parsel = require('.');
-var expandArgs = require('./expand_args');
+var parsel = require(".");
+var expandArgs = require("./expand_args");
 
 module.exports = {
   encrypt: function() {
