@@ -1,5 +1,9 @@
 # parsel
 
+[![Build Status](https://travis-ci.org/fnando/parsel-js.svg)](https://travis-ci.org/fnando/parsel-js)
+[![npm](https://img.shields.io/npm/dt/parsel.svg)](http://npmjs.com/package/parsel)
+[![npm](https://img.shields.io/npm/v/parsel.svg)](http://npmjs.com/package/parsel)
+
 Encrypt and decrypt data with a given key.
 
 This library was created to allow an easy data
